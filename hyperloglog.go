@@ -6,7 +6,7 @@
 // For a full description of the algorithm, see the paper HyperLogLog:
 // the analysis of a near-optimal cardinality estimation algorithm by
 // Flajolet, et. al.
-package hyperloglog
+package github.com/zzylol/hyperloglog
 
 import (
 	"fmt"
