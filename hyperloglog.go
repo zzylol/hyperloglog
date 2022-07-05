@@ -117,6 +117,9 @@ func (h *HyperLogLog) Count() uint64 {
 // Merge another HyperLogLog into this one. The number of registers in
 // each must be the same.
 func (h1 *HyperLogLog) Merge(h2 *HyperLogLog) error {
+	if h1 == nil || h2 == nil {
+		return nil
+	}
 	if h1.m != h2.m {
 		return fmt.Errorf("number of registers doesn't match: %d != %d",
 			h1.m, h2.m)
